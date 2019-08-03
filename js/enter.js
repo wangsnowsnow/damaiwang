@@ -118,6 +118,27 @@ $(".text").blur(function(){
 		"border-color":"#ccc"});
 });
 
+//验证码倒计时
+ var times = 60;
+ function roof(){
+     if(times == 0){
+         $('.getyzm').text('获取验证码('+times+'秒)');
+         $('.getyzm').prop('disabled',false);
+         $('.getyzm').text('获取验证码');
+         times = 60;
+         return
+     }
+     $('.getyzm').text(times+'秒'+'后重发');
+     times--;
+ 
+     setTimeout(roof,1000);
+ }
+ $('.getyzm').on('click',function(){
+     
+     $(this).prop('disabled',true);
+     roof();
+ 
+ });
 
 //前端验证
 var arr = ["userphone","userpass"];
@@ -140,152 +161,5 @@ $$(`#userpassId`).onblur = function(){
     }
 }
 
-// $$("#checkpass").onblur = function(){
-//     if(checkpass()){
-//         $$("#passHelpAgain").style.display="none";
-//         $$("#checkpass").style.cssText=`border:1px solid #ccc;`;
-//     }else{
-//         $$("#passHelpAgain").style.display = "block";
-//     }
-// }
-
-
-$(".sub").click(function(){
-	if( ("#userphoneId").val("")||("#userpassId").val("")) {
-		$(".warn").css({"display":"block"});
-		
-	}
-})
-// //注册按钮绑定事件
-// $$("#btnReg").onclick = function(){
-//     //1、先看前端验证是否全部通过
-//     if(!frontCheck() || !checkpass()){
-//         alert("亲，请把信息输入正确!");
-//         return;
-//     }
-//     //2、后端注册
-//     ajaxByPromise("checkuser.php","get",{userphone:$$("#userphoneId").value},true)
-//         .then(
-//                 (str)=>{
-//                     if(str!="1"){
-//                         regSave();
-//                     }else{
-//                         alert("此手机号已经注册！");
-//                     }
-//                 },
-//                 (str)=>{
-//                     alert(str);
-//                 }
-//         );
-// }
-
-
-// //前端验证
-// function frontCheck(){
-//     for(let i in arr){
-//         if(!check($$(`#${arr[i]}Id`).value,arr[i])){
-//             return false;
-//         }
-//     }
-//     return true;
-// }
-
-// //重复密码的验证
-// function checkpass(){
-//     return $$("#userpassId").value == $$("#checkpass").value;
-// }
-
-// //用户名是否存在
-// var isExistsUser = false;
-// // //后端验证用户名是否存在
-// // function afterCheckUser(func){
-     
-// // }
-
-// //后端注册
-// function regSave(){
-    
-//     ajaxByPromise(
-//         "regSave03.php",
-//         "post",
-//         {
-//             userphone:$$("#userphoneId").value,
-//             userpass:$$("#userpassId").value
-//         },
-//         true
-//         ).then(
-//         (str)=>{
-//             if(str==1){
-//                 window.open('enter.html');
-//             }else{
-//                alert("亲，不好意思，注册失败！请重新输入内容");
-//             }
-//         },(str)=>{
-//             alert(str);
-//         });
-// }
-
-
-// function check(str,type) {
-//     switch(type){
-//         case "username":var r =  /^[a-zA-Z_]\w{5,14}$/ ; break;
-//         //数字，字母，下划线，6,16
-//         case "userpass":var r =  /^\w{6,20}$/; break;
-//         case "email":var r =  /^[1-9a-zA-Z_]\w{5,17}@\w{2,10}\.(com|cn|net|com.cn)$/; break;
-//         case "post":var r =  /^[1-9]\d{5}$/ ; break;
-//         case "card":var r = /^[1-9]\d{5}[12]\d{3}(0[1-9]|1[0-2])\d{5}[0-9X]$/ ; break;
-//         case "userphone":var r =  /^1[3-9]\d{9}$/; break;
-//     }
-//     return r.test(str);
-// }
-
-// function ajaxByPromise(url,method,params,isAsync){
-//     //1、创建对象
-//     let xhr = new XMLHttpRequest();
-
-//     //产生请求参数的字符串：循环把json对象转换为形如这样的格式：key1=value1&key2=value2
-//     let sendstr = '';
-//     for(let key in params){
-//         sendstr += `${key}=${params[key]}&`;
-//         // sendstr += key+"="+params[key]+"&"
-//     }
-//     if(sendstr.length>0){
-//         sendstr = sendstr.substring(0,sendstr.length-1); //musicname=你
-//     }
-    
-//     let urlAndParam = url;//getMusic.php
-//     //如果是get方式，并且有请求参数，那么就把url和请求参数用问号隔开
-//     if(method.toLowerCase()=="get" && sendstr!=""){
-//         urlAndParam+= "?"+sendstr;//getMusic.php?musicname=你
-//     }
-
-//     //2、设置请求参数
-//     xhr.open(method,urlAndParam,isAsync);
-
-//     let p = new Promise(function(resolve,reject){
-//         //3、设置回调函数
-//         xhr.onreadystatechange = function(){            
-//             if(xhr.readyState==4){
-//                 if(xhr.status==200){
-//                     if(resolve){
-//                         resolve(xhr.responseText);
-//                     }
-//                 }else{
-//                     if(reject){
-//                         reject("服务器出错了");
-//                     }
-//                 }
-//             }
-//         }
-//     });
-  
-//     if(method.toLowerCase()=="post"){
-//         xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-//         xhr.send(sendstr);
-//     }else{
-//         //4、发送请求
-//         xhr.send(); 
-//     }
-//     return p;
-// }	
+	
 

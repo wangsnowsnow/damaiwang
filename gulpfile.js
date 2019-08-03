@@ -33,24 +33,24 @@ gulp.task("copyall",async ()=>{
 });
 
 gulp.task("watchall",async ()=>{
-	gulp.watch("damaiwang/*.html",async ()=>{
-	gulp.src("damai/*.html")
+	gulp.watch("*.html",async ()=>{
+	gulp.src("*.html")
 	.pipe(gulp.dest("D:\\PHP\\WWW\\damai"));
 	})
-	gulp.watch("damaiwang/css/*.css",async ()=>{
-	gulp.src("damai/css/*.css")
+	gulp.watch("css/*.css",async ()=>{
+	gulp.src("css/*.css")
 	.pipe(gulp.dest("D:\\PHP\\WWW\\damai\\css"));
 	})
-	gulp.watch("damaiwang/js/*.js",async ()=>{
-	gulp.src("damai/js/*.js")
+	gulp.watch("js/*.js",async ()=>{
+	gulp.src("js/*.js")
 	.pipe(gulp.dest("D:\\PHP\\WWW\\damai\\js"));
 	})
-	gulp.watch("damaiwang/img/*.{jpg,png}",async ()=>{
-	gulp.src("damai/img/*.{jpg,png}")
+	gulp.watch("img/*.{jpg,png}",async ()=>{
+	gulp.src("img/*.{jpg,png}")
 	.pipe(gulp.dest("D:\\PHP\\WWW\\damai\\img"));
 	})
-	gulp.watch("damaiwang/*.php",async ()=>{
-	gulp.src("damai/*.php")
+	gulp.watch("*.php",async ()=>{
+	gulp.src("*.php")
 	.pipe(gulp.dest("D:\\PHP\\WWW\\damai"));
 	})
 	// gulp.watch("dami/sass/**/*",async ()=>{
