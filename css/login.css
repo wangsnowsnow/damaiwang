@@ -1,0 +1,417 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,td,input,select,option,textarea{
+	margin:0;
+	padding:0;
+}
+ul,li{
+	list-style-type:none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+img{
+	vertical-align: middle;
+}
+body{
+	font-family:"微软雅黑";
+}
+input{
+	outline: none;
+	border: 0;
+	text-indent: 10px;
+}
+/*头部*/
+.pc-head{
+	width: 100%;
+	background: #fff;
+}
+.pc-bar{
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+}
+.bar1{
+	float: left;
+	margin-top: 24px;
+}
+.bar2{
+	float: right;
+	margin-top: 24px;
+    width: 121px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    font-size: 14px;
+    color: #888;
+}
+.pc-bar:first-child a img{
+	width: 108px;
+	height: 48px;
+}
+/*内容*/
+.big-register{
+	width: 100%;
+	height: 540px;
+	padding-top: 40px;
+	background: #F8F8F8;
+}
+.register{
+	width: 1200px;
+	height: 500px;
+	margin:0 auto;
+	background: #fff;
+
+	padding-top: 40px;
+}
+.root{
+	width: 720px;
+	height: 347px;
+	margin: 0 auto;
+}
+
+.message{
+	margin-bottom: 20px;
+	width: 100%;
+	height: 41px;
+}
+.mOne{
+	margin-bottom: 0px;
+}
+.mTwo{
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+.mThree{
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+.mFour{
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+.left-one{
+	width: 240px;
+	height: 100%;
+	float: left;
+}
+#phones{
+	position: relative;
+}
+.phone{
+	display: block;
+	line-height: 40px;
+	font-size: 14px;
+	color: #666;
+	padding-right: 16px;
+	text-align: right;
+}
+.phone::before{
+	margin-right: 4px;
+    content: "*";
+    color: #ff3000;
+}
+.right-two #userpassId,.right-two #checkpass{
+	width: 296px;
+	height: 36px;
+	border: 1px solid #c4c6cf;
+	border-radius: 3px;
+}
+
+/* 滑动控件容器,亮灰色背景 */
+
+#box{
+    width:296px;
+    height: 36px;
+    position: relative;
+    background: #e8e8e8 ;
+    float: left;
+    border-radius: 3px; 
+    border: 1px solid #e8e8e8;
+	color: #9C9C9C;
+}
+#box .btn{
+    width:38px;
+    height: 100%;
+    box-sizing: border-box;
+    border:1px solid #e8e8e8;
+    text-align: center;
+    line-height: 35px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    font-size: 16px;
+    background: #fff;
+    cursor: pointer;
+    color: #e8e8e8;
+    font-weight: bolder;
+    cursor: move;
+}
+#box .bg{
+    width: 0;
+    height: 100%;
+    background: #7ac23c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+#box .text{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    line-height: 40px;
+    z-index: 2;
+    font-size: 12px;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+.right-two{
+	position: relative;
+}
+.judge{
+	position: absolute;
+	width: 298px;
+	height: 85px;
+	left: 555px;
+	top: -27px;
+    box-shadow: 2px -1px 9px #ccc;
+    display: none;
+}
+.judge p{
+	font-size: 12px;
+	color: #333;
+	line-height: 20px;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+.judge::before{
+	position: absolute;
+	left: -10px;
+	top: 35px;
+	content: "";
+	width: 0;
+	height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #fff #fff transparent transparent;
+    transform: rotate(-135deg);
+    box-shadow: 2px -1px 2px #ccc;
+}
+
+.btn-login{
+	padding-left: 245px;
+	margin-top: 20px;
+	float: left;
+}
+.select{
+	float: left;
+	width: 500px;
+	padding-left: 240px;
+	margin-top: 20px;
+	font-size: 14px;
+	color: #333;	
+}
+.select p{
+	width: 274px;
+}
+.select a{
+	color: #5584ff;
+}
+.agree{
+    border: 1px solid #e8e8e8;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+.butt{
+	border-radius: 3px; 
+    padding: 0 16px;
+    height: 40px; 
+    line-height: 38px;
+    font-size: 18px;
+    border-width: 1px;background-color: #ff1268;
+    background-image: linear-gradient(90deg,#ff4aae,#ff1268);
+    border: 1px solid #ff1268;
+    color:#fff;
+    cursor: pointer;
+}
+
+.user{
+	width: 300px;
+	height: 40px;
+	float: left;
+}
+.user span{
+	display: inline-block;
+	width: 149px;
+	height: 40px;
+	border: 1px solid #c4c6cf;
+	box-sizing: border-box;
+	border-radius: 3px;
+	line-height: 40px;
+	font-size: 14px;
+	cursor: pointer;
+
+}
+.user #emId{
+	font-style: normal;
+}
+.user .uls{
+	display: none;
+	border: 1px solid #c4c6cf;
+	border-top:0; 
+	border-radius: 3px;
+	background: #fff;
+	position: relative;
+	z-index: 7;
+}
+.user .uls span{
+	border: 0;
+	text-indent: 15px;
+	cursor: pointer;
+}
+
+.user span b{
+	background: url(../img/jiant.png) no-repeat;
+	display: inline-block;
+	width: 25px;
+	height: 29px;
+	position: absolute;
+	top: 20%;
+	left: 80%;
+}
+.user input{
+	text-indent: 10px;
+	border: none;
+	outline: none;		
+	border: 1px solid #c4c6cf;
+	border-radius: 3px;
+	width: 149px;
+	height: 38px;
+	float: right;
+}
+.uls li{
+	text-indent: 10px;
+}
+.uls li:hover{
+	background: #f2f3f7;
+}
+.phone-help{
+	overflow: hidden;
+	margin-top: 5px;
+	margin-left: 240px;
+	width: 300px;
+	height: 21px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #ff3000;
+	display: none;
+}
+/*底部*/
+.box{
+	width: 100%;
+	background: #f8f8f8;
+}
+.footer{
+	width: 1200px;
+	height: 340px;
+	margin: 30px auto 0;
+	background: #f8f8f8;
+}
+.footer-top{
+	width: 100%;
+	height: 92px;
+	text-align: center;
+	line-height: 92px;
+	font-size: 12px;
+}
+
+.footer-top li{
+	display: inline-block;
+	color:#111;
+}
+.footer-top a{
+	text-decoration: none;
+}
+.footer-top a:hover{
+	text-decoration:underline;
+	color: #FF1268;
+}
+.footer-bottom{
+	width: 100%;
+	height: 190px;
+}
+.footer-left{
+	float: left;
+	width: 295px;
+	height: 114px;
+}
+.footer-right{
+	width: 806px;
+	height: 188px;
+	float: right;
+}
+.footer-left .bottom-img{
+	width: 167px;
+	height: 60px;
+}
+.code{
+	width: 87px;
+	height: 115px;
+	font-size: 12px;
+	color: #111;
+	text-align: center;
+	float: right;
+}
+.code .code-img{
+	float: right;
+	width: 87px;
+	height: 87px;
+}
+.footer-btn{
+	width: 98px;
+	height: 27px;
+	border-radius: 20px;
+	background:#FF1268;
+	line-height: 27px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.footer-btn a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+}
+.ul-first li{
+	display: inline-block;
+	font-size: 14px;
+	color:#111;
+	margin-bottom: 6px;
+}
+.ul-first li a{
+	text-decoration: none;
+}
+.ul-second li{
+	display: inline-block;
+	font-size: 14px;
+	color:#111;
+	margin-bottom: 6px;
+} 
+.ul-second li a{
+	text-decoration: none;
+}
+.footer-right p{
+	font-size: 14px;
+}
+.footer-img{
+	margin-top: 15px;
+}
+.footer a:hover{
+	color: #FF1268;
+}
