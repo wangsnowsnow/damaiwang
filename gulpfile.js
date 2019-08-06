@@ -16,7 +16,7 @@ gulp.task("copyall",async ()=>{
 	gulp.src("css/*.css")
 	.pipe(gulp.dest("D:\\PHP\\WWW\\damai\\css"));
 
-	gulp.src("img/*.{jpg,png}")
+	gulp.src("img/*.{jpg,png,webp}")
 	.pipe(gulp.dest("D:\\PHP\\WWW\\damai\\img"));
 
 	gulp.src("icon/**/*")
@@ -46,7 +46,7 @@ gulp.task("watchall",async ()=>{
 	.pipe(gulp.dest("D:\\PHP\\WWW\\damai\\js"));
 	})
 	gulp.watch("img/*.{jpg,png}",async ()=>{
-	gulp.src("img/*.{jpg,png}")
+	gulp.src("img/*.{jpg,png,webp}")
 	.pipe(gulp.dest("D:\\PHP\\WWW\\damai\\img"));
 	})
 	gulp.watch("*.php",async ()=>{
