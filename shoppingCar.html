@@ -57,14 +57,14 @@
 </div>
 <!-- 内容 -->  
 <div class="dm-item">
-    <ul>
-        <li><input type="checkbox">全选</li>
+    <ul id="uls">
+        <li><input type="checkbox" id="checkallid">全选</li>
         <li>项目信息</li>
         <li>座位信息</li>
         <li>单价</li>
         <li>数量</li>
-        <li>优惠</li>
         <li>小计</li>
+        <li>删除</li>
     </ul>
     <div class="dm-body">
     </div>
@@ -83,7 +83,7 @@
             实付款：
             <span>
                 ￥
-                <em>1548.00</em>
+                <em id="spanTotalMoney">1548.00</em>
             </span>
         </div>
     </div>

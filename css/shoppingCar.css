@@ -235,7 +235,6 @@ body {
 /*内容*/
 .dm-item {
   width: 1000px;
-  height: 316px;
   margin: 50px auto 110px;
 }
 .dm-item ul {
@@ -271,18 +270,14 @@ body {
 }
 .dm-item .dm-body {
   width: 1000px;
-  height: 124px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
 .dm-item .dm-wrapper {
   width: 100%;
-  height: 46px;
   color: #826666;
   font-size: 12px;
-  background: #f7f7f7;
-  line-height: 46px;
-  text-align: center;
+  height: 46px;
 }
 .dm-item .dm-term {
   width: 100%;
